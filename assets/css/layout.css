@@ -1,0 +1,28 @@
+/*=================================
+  LAYOUT — wrapper, ritme section, grid umum
+==================================*/
+.wrap {
+  max-width: var(--shell-max);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* Setiap <section> mendapat ritme vertikal konsisten dari sini,
+   supaya section-section baru tidak perlu redefinisi padding sendiri. */
+main > section {
+  padding: var(--sp-8) 0;
+  border-bottom: 1px solid var(--panel-line);
+}
+main > section:last-of-type { border-bottom: none; }
+
+.section-head { padding-bottom: var(--sp-5); max-width: 640px; }
+.section-head .tag { margin-bottom: var(--sp-3); }
+.section-head h2 {
+  font-size: var(--fs-h2);
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .wrap { padding: 0 20px; }
+  main > section { padding: var(--sp-6) 0; }
+}

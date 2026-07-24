@@ -1,0 +1,32 @@
+/*=================================
+  FOOTER
+==================================*/
+footer { padding: var(--sp-5) 0;
+border-top: 1px solid var(--paper-dim);
+
+}
+footer .wrap {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: var(--sp-3);
+}
+footer p { font-family: var(--font-mono); font-size: var(--fs-mono); color: var(--paper-dim); }
+footer .foot-meta { display: flex; flex-direction: column; gap: 2px; }
+footer .foot-meta .built-with { color: var(--paper-dim); }
+footer .foot-meta .built-with strong { color: var(--brass); font-weight: 500; }
+
+.foot-links { display: flex; gap: var(--sp-4); align-items: center; }
+.foot-links a { font-family: var(--font-mono); font-size: var(--fs-mono); color: var(--paper-dim); }
+.foot-links a:hover { color: var(--brass); }
+
+#back-to-top {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--paper-dim);
+  border: 1px solid var(--panel-line);
+  padding: 8px 14px;
+  transition: opacity var(--dur-med) var(--ease), border-color var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+  opacity: 0;
+  pointer-events: none;
+}
+#back-to-top.is-visible { opacity: 1; pointer-events: auto; }
+#back-to-top:hover { border-color: var(--brass); color: var(--brass); }

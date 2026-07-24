@@ -1,0 +1,39 @@
+/*=================================
+  ABOUT
+==================================*/
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-7); }
+.about h2 { font-size: 1.9rem; margin-bottom: var(--sp-4); }
+.about p { color: var(--paper-dim); margin-bottom: var(--sp-3); }
+
+.about-sub-heading {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--brass);
+  margin-top: var(--sp-4);
+  margin-bottom: var(--sp-2);
+}
+
+.fun-fact {
+  margin-top: var(--sp-4);
+  padding: var(--sp-3) var(--sp-4);
+  border-left: 2px solid var(--brass);
+  background: var(--panel);
+  color: var(--paper-dim);
+  font-size: var(--fs-small);
+}
+
+.skills-list li {
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--panel-line);
+  display: flex; justify-content: space-between; gap: var(--sp-3);
+  color: var(--paper-dim);
+}
+.skills-list li b { color: var(--paper); font-weight: 500; font-family: var(--font-body); }
+
+@media (max-width: 800px) {
+  .about-grid { grid-template-columns: 1fr; gap: var(--sp-5); }
+}

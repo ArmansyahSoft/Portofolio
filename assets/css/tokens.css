@@ -1,0 +1,59 @@
+/*=================================
+  TOKENS — sumber tunggal untuk warna, tipografi, spacing.
+  Tema "buku besar (ledger) bertemu terminal" — mencerminkan
+  latar office management + self-taught dev.
+  Urutan wajib: tokens → base → layout → components → sections
+==================================*/
+:root {
+  /* --- Warna --- */
+  --ink:        #12181F; /* background utama, navy gelap */
+  --panel:      #1B232C; /* panel sedikit lebih terang dari ink */
+  --panel-2:    #232D38; /* panel level dua, untuk gradient/hover */
+  --panel-line: #2B3540; /* garis pembatas tipis */
+  --paper:      #F1ECDE; /* teks terang, warna "kertas" */
+  --paper-dim:  #B9B3A0; /* teks sekunder */
+  --brass:      #C9974F; /* aksen kuningan — CTA & highlight */
+  --brass-hi:   #DBA765; /* brass saat hover */
+  --sage:       #7BA88C; /* status online / sukses */
+  --rust:       #C97A54; /* status warning / error, senada brass */
+
+  /* --- Tipografi --- */
+  --font-display: 'Fraunces', serif;
+  --font-body:    'IBM Plex Sans', sans-serif;
+  --font-mono:    'IBM Plex Mono', monospace;
+
+  /* --- Skala tipe --- */
+  --fs-h1: clamp(2.4rem, 5vw, 3.6rem);
+  --fs-h2: clamp(1.6rem, 3vw, 2rem);
+  --fs-h3: 1.15rem;
+  --fs-body: 1rem;
+  --fs-small: .85rem;
+  --fs-mono: .78rem;
+
+  /* --- Spacing (skala 4px) --- */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 32px;
+  --sp-6: 48px;
+  --sp-7: 64px;
+  --sp-8: 96px;
+
+  /* --- Lainnya --- */
+  --radius: 2px;
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --dur-fast: .2s;
+  --dur-med: .4s;
+  --dur-slow: .7s;
+  --shell-max: 1100px;
+}
+
+/* Dukungan reduced-motion global — dihormati di seluruh komponen */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0s;
+    --dur-med: 0s;
+    --dur-slow: 0s;
+  }
+}

@@ -1,0 +1,77 @@
+/*=================================
+  CERTIFICATES — gallery + modal
+==================================*/
+.cert-group-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--panel-line);
+}
+.cert-group-title-spaced { margin-top: var(--sp-6); }
+
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--sp-4);
+}
+
+.cert-empty {
+  grid-column: 1 / -1;
+  padding: var(--sp-5);
+  border: 1px dashed var(--panel-line);
+  color: var(--paper-dim);
+  font-size: var(--fs-small);
+  text-align: center;
+}
+
+.cert-card {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--panel-line);
+  background: var(--panel);
+  cursor: pointer;
+  padding: 0;
+  transition: border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.cert-card:hover, .cert-card:focus-visible { border-color: var(--brass); transform: translateY(-2px); }
+.cert-card img { width: 100%; aspect-ratio: 1.41; object-fit: cover; }
+.cert-card .cert-name {
+  display: block;
+  padding: var(--sp-3);
+  font-size: var(--fs-small);
+  color: var(--paper-dim);
+}
+
+/* --- Modal preview --- */
+.cert-modal {
+  position: fixed; inset: 0;
+  background: rgba(18, 24, 31, .92);
+  display: flex; align-items: center; justify-content: center;
+  padding: var(--sp-5);
+  z-index: 100;
+}
+.cert-modal[hidden] { display: none; }
+.cert-modal-content {
+  max-width: 720px; width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--panel-line);
+  padding: var(--sp-4);
+}
+.cert-modal-content img { width: 100%; margin-bottom: var(--sp-3); }
+.cert-modal-close {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--paper-dim);
+  float: right;
+}
+.cert-modal-close:hover { color: var(--brass); }
+#cert-modal-caption {
+  clear: both;
+  color: var(--paper-dim);
+  font-size: var(--fs-small);
+}

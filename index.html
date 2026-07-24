@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark" data-lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Armansyah Aris Nugraha — Frontend Developer</title>
+  <meta name="description" content="Portofolio Armansyah Aris Nugraha, frontend developer otodidak asal Indonesia. Dari SMK Manajemen Perkantoran ke dunia software engineering.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arman.dev">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Armansyah Aris Nugraha — Frontend Developer">
+  <meta property="og:description" content="Portofolio developer yang membuktikan: dari spreadsheet ke source code bukan sekadar slogan.">
+  <meta property="og:image" content="assets/images/og-image.png">
+  <meta property="og:url" content="https://arman.dev">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Armansyah Aris Nugraha — Frontend Developer">
+  <meta name="twitter:description" content="Portofolio developer. Dari spreadsheet ke source code.">
+  <meta name="twitter:image" content="assets/images/og-image.png">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Armansyah Aris Nugraha",
+    "jobTitle": "Frontend Developer",
+    "url": "https://arman.dev",
+    "description": "Frontend developer otodidak dengan latar belakang SMK Manajemen Perkantoran",
+    "sameAs": [
+      "https://github.com/armansyah",
+      "https://linkedin.com/in/armansyah"
+    ]
+  }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- CSS — urutan wajib: tokens → base → layout → components → sections -->
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/sections/header.css">
+  <link rel="stylesheet" href="assets/css/sections/hero.css">
+  <link rel="stylesheet" href="assets/css/sections/about.css">
+  <link rel="stylesheet" href="assets/css/sections/skills.css">
+  <link rel="stylesheet" href="assets/css/sections/projects.css">
+  <link rel="stylesheet" href="assets/css/sections/experience.css">
+  <link rel="stylesheet" href="assets/css/sections/certificates.css">
+  <link rel="stylesheet" href="assets/css/sections/learning-journey.css">
+  <link rel="stylesheet" href="assets/css/sections/currently-learning.css">
+  <link rel="stylesheet" href="assets/css/sections/github-stats.css">
+  <link rel="stylesheet" href="assets/css/sections/blog.css">
+  <link rel="stylesheet" href="assets/css/sections/contact.css">
+  <link rel="stylesheet" href="assets/css/sections/footer.css">
+
+  <!-- Inline critical styles: skip-link + hero-role (no dedicated CSS file) -->
+  <style>
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 4px;
+      z-index: 999;
+      background: var(--brass);
+      color: var(--ink);
+      padding: 8px 16px;
+      font-family: var(--font-mono);
+      font-size: .8rem;
+    }
+    .skip-link:focus {
+      left: 4px;
+    }
+    .hero-role {
+      font-family: var(--font-mono);
+      margin-bottom: 32px;
+      color: var(--paper-dim);
+      font-size: .9rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Skip navigation untuk aksesibilitas -->
+  <a href="#main-content" class="skip-link">Langsung ke konten utama</a>
+
+  <!-- [FEATURE: CommandPalette] -->
+  <!-- [FEATURE: DarkMode] -->
+  <!-- [FEATURE: LanguageSwitcher] -->
+
+  <header>
+    <div class="wrap">
+      <a href="#hero" class="brand">Armansyah<span>.</span></a>
+      <nav aria-label="Navigasi utama">
+        <button class="nav-toggle" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="nav-menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#about" class="nav-link">Tentang</a></li>
+          <li><a href="#skills" class="nav-link">Skill</a></li>
+          <li><a href="#projects" class="nav-link">Proyek</a></li>
+          <li><a href="#experience" class="nav-link">Pengalaman</a></li>
+          <li><a href="#certificates" class="nav-link">Sertifikat</a></li>
+          <li><a href="https:wa.me/62895380185656" class="nav-link">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="wrap">
+        <span class="availability-badge">Siap Berkontribusi Untuk Perusahaan</span>
+        <span class="tag" style="margin-top:16px">Portofolio Pengembangan Web</span>
+        <h1>Dari mengelola <em>Spreadsheet</em>,<br>kini menyusun <em>source code</em>.</h1>
+        <p class="hero-intro">
+          Lulusan SMK Manajemen Perkantoran yang membangun kemampuan pengembangan web secara mandiri
+          selama dua tahun terakhir secara otodidak. Membawa ketelitian administratif ke dalam cara
+          saya menulis dan menyusun kode.
+        </p>
+
+        <!-- Typing animation target -->
+        <p class="hero-role">
+          Saya seorang <span id="typing-target">Web Developer</span>
+          <noscript><span class="typing-static">Web Developer</span></noscript>
+        </p>
+
+        <div class="btn-group"> 
+          <a href="#projects" class="btn btn-brass">Lihat Proyek</a>
+          <a href="https:wa.me/62895380185656" class="btn btn-line">Hubungi Saya</a>
+        </div>
+
+        <!-- Ledger element -->
+        <div class="ledger" aria-label="Statistik ringkas">
+          <div class="ledger-cell">
+            <div class="val">2 Thn</div>
+            <div class="lbl">Otodidak Belajar Mandiri</div>
+          </div>
+          <div class="ledger-cell">
+            <div class="val">3</div>
+            <div class="lbl">Proyek Ditampilkan</div>
+          </div>
+          <div class="ledger-cell">
+            <div class="val">SMK</div>
+            <div class="lbl">Manajemen Perkantoran</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroll indicator -->
+    <div id="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <span class="scroll-arrow"></span>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="wrap about-grid">
+        <div>
+          <h2>Tentang Saya</h2>
+          <p>
+            Perkenalkan nama saya Armasnyah Aris Nugraha saya memulai jalur karir dari latar belakang SMK Manajemen Perkantoran (MPLB),
+            lalu secara mandiri mendalami pengembangan web selama dua tahun terakhir secara otodidak.
+            Ketelitian administratif yang saya bangun bertahun-tahun kini tercermin dalam cara saya
+            menyusun kode: terstruktur, terdokumentasi, dan mudah dipelihara.
+          </p>
+          <p>
+            Perjalanan dari spreadsheet ke source code bukan sekadar perubahan alat — ini adalah
+            transformasi cara berpikir. Saya belajar bahwa logika di balik formula Excel dan logika
+            di balik fungsi JavaScript ternyata tidak jauh berbeda: keduanya tentang mengolah data
+            menjadi hasil yang bermakna.
+          </p>
+
+          <h3 class="about-sub-heading">Pendidikan</h3>
+          <p>SMK Negeri — Manajemen Perkantoran dan Layanan Bisnis (MPLB), lulus 2023.</p>
+
+          <h3 class="about-sub-heading">Tujuan Karir</h3>
+          <p>Saya ingin menjadi seorang junior frontend developer yang handal dan dapat dipercaya oleh perusahaan, khususnya di bidang pengembangan web dan kecerdasan buatan (AI). Serta tertarik membangun produk yang memecahkan masalah nyata.</p>
+
+          <h3 class="about-sub-heading">Sedang Dipelajari</h3>
+          <p>React, Next.js, TypeScript, AWS, Docker, dan Machine Learning.</p>
+
+          <div class="fun-fact">
+            💡 Fun fact: Proyek pertama saya adalah otomatisasi laporan kantor menggunakan Google Sheets + Apps Script — sebelum saya tahu itu namanya "scripting".
+          </div>
+        </div>
+        <div>
+          <ul class="skills-list" aria-label="Daftar keahlian">
+            <li><b>Frontend</b><span>HTML · CSS · JavaScript</span></li>
+            <li><b>Desain</b><span>Figma → Code</span></li>
+            <li><b>Version Control</b><span>Git &amp; GitHub</span></li>
+            <li><b>Deployment</b><span>Vercel</span></li>
+            <li><b>Administratif</b><span>Manajemen Perkantoran</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="skills-section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Kemampuan Teknis</span>
+          <h2>Teknologi yang saya kuasai dan pelajari.</h2>
+        </div>
+        <div class="skills-categories">
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Frontend</h3>
+            <div class="skill-badges">
+              <span class="skill-badge">HTML5</span>
+              <span class="skill-badge">CSS3</span>
+              <span class="skill-badge">JavaScript ES6+</span>
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>React</span>
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>TypeScript</span>
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>Next.js</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Backend</h3>
+            <div class="skill-badges">
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>Node.js</span>
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>PHP</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Database</h3>
+            <div class="skill-badges">
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>MySQL</span>
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>SQLite</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Cloud &amp; DevOps</h3>
+            <div class="skill-badges">
+              <span class="skill-badge">Vercel</span>
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>AWS</span>
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>Docker</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">AI / Machine Learning</h3>
+            <div class="skill-badges">
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>Machine Learning</span>
+              <span class="skill-badge" data-learning="true"><span class="learning-label">Learning</span>Prompt Engineering</span>
+            </div>
+          </div>
+
+          <div class="skill-category">
+            <h3 class="skill-category-title">Tools</h3>
+            <div class="skill-badges">
+              <span class="skill-badge">Git</span>
+              <span class="skill-badge">GitHub</span>
+              <span class="skill-badge">Figma</span>
+              <span class="skill-badge">VS Code</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <!-- [FEATURE: ProjectFilter] -->
+    <section id="projects" class="projects-section" data-filter="all">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Karya Terpilih</span>
+          <h2>Tiga proyek, tiga masalah berbeda yang diselesaikan.</h2>
+        </div>
+
+        <!-- Nusantara Properti -->
+        <article class="project-card">
+          <div class="project-visual">
+            <h3 class="ptitle">Nusantara Properti</h3>
+          </div>
+          <div class="project-body">
+            <p>Asisten Properti berbasis AI bernama "Nara" yang membantu calon pembeli mencari hunian,
+              menghitung simulasi KPR secara interaktif, hingga menjadwalkan survei lengkap dengan
+              integrasi kontak WhatsApp dan CS langsung dari widget chat.</p>
+            <ul class="feature-list">
+              <li>Chatbot AI "Nara" untuk pencarian hunian interaktif</li>
+              <li>Kalkulator KPR dengan simulasi cicilan real-time</li>
+              <li>Integrasi WhatsApp untuk jadwal survei properti</li>
+              <li>Widget chat CS langsung di halaman</li>
+            </ul>
+            <div class="stack">
+              <span>HTML/CSS/JS</span>
+              <span>AI Chatbot</span>
+              <span>Kalkulator KPR</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-line" aria-disabled="true" disabled aria-label="Repositori GitHub belum tersedia">GitHub</button>
+              <a href="https://chatbot-github-id.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-brass">Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Syantara -->
+        <article class="project-card">
+          <div class="project-visual">
+            <h3 class="ptitle">Syantara</h3>
+          </div>
+          <div class="project-body">
+            <p>Company profile untuk perusahaan teknologi fiktif menampilkan enam lini layanan (web, mobile,
+              AI, cloud, keamanan siber, analitik data), profil tim, statistik pencapaian, dan asisten
+              chat yang menyambut pengunjung secara langsung di halaman.</p>
+            <ul class="feature-list">
+              <li>Enam lini layanan teknologi yang dipresentasikan</li>
+              <li>Halaman profil tim dengan data dinamis</li>
+              <li>Statistik pencapaian perusahaan</li>
+              <li>Asisten chat interaktif di halaman utama</li>
+            </ul>
+            <div class="stack">
+              <span>HTML/CSS/JS</span>
+              <span>Company Profile</span>
+              <span>AI Chat Widget</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-line" aria-disabled="true" disabled aria-label="Repositori GitHub belum tersedia">GitHub</button>
+              <a href="https://syantara.vercel.app" target="_blank" rel="noopener noreferrer" class="btn btn-brass">Demo</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- AURÉA -->
+        <article class="project-card">
+          <div class="project-visual">
+            <h3 class="ptitle">AURÉA</h3>
+          </div>
+          <div class="project-body">
+            <p>Landing page brand fashion mewah fiktif, dirancang dari Figma sebelum diterjemahkan ke kode.
+              Fokus pada tipografi editorial, palet gelap-emas-krem, serta bagian koleksi produk dan
+              testimoni yang dirender secara dinamis lewat JavaScript.</p>
+            <ul class="feature-list">
+              <li>Desain dari Figma ke kode (Figma to Code)</li>
+              <li>Tipografi editorial dengan hierarki visual kuat</li>
+              <li>Koleksi produk dirender dinamis via JavaScript</li>
+              <li>Bagian testimoni pelanggan interaktif</li>
+            </ul>
+            <div class="stack">
+              <span>HTML/CSS/JS</span>
+              <span>Figma to Code</span>
+              <span>Landing Page</span>
+            </div>
+            <div class="project-actions">
+              <button class="btn btn-line" aria-disabled="true" disabled aria-label="Repositori GitHub belum tersedia">GitHub</button>
+              <a href="https://aurea-flame.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-brass">Demo</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="experience-section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Pengalaman</span>
+          <h2>Perjalanan profesional yang membentuk cara kerja saya.</h2>
+        </div>
+
+        <div class="exp-tabs" role="tablist" aria-label="Kategori pengalaman">
+          <button class="exp-tab" role="tab" aria-selected="true" aria-controls="panel-internship" id="tab-internship">Praktik Kerja Lapangan</button>
+          <button class="exp-tab" role="tab" aria-selected="false" aria-controls="panel-org" id="tab-org">Organisasi</button>
+        </div>
+
+      <div id="panel-internship" class="exp-panel" role="tabpanel" aria-labelledby="tab-internship" aria-hidden="false">
+        <p class="exp-empty" role="status">Melaksankan Praktik Kerja Lapangan kurang lebih selama 4 Bulan</p>
+        <div class="cert-grid" id="cert-grid-academy">
+        <button type="button" class="cert-card" data-full="assets/images/certs/Sertifikat Prakerin SMKN 11 Arman.jpg" data-issuer="SMKN 11 Bandung" data-date="Oktober 2025 - Januari 2026">
+          <img src="assets/images/certs/Sertifikat Prakerin SMKN 11 Arman.jpg" alt="Sertifikat kelulusan atas PKL" loading="lazy">
+          <span class="cert-name">PKL kurang lebih selama 4 bulan</span>
+        </button>
+      </div>
+    </div>
+
+        <div id="panel-org" class="exp-panel" role="tabpanel" aria-labelledby="tab-org" aria-hidden="true">
+          <p class="exp-empty" role="status">Mengikuti Organisasi Sekolah yaitu MPK (Majelis Perwakilan Kelas) dengan jabatan sebagai Komisi A</p>
+          <div class="cert-grid" id="cert-grid-academy">
+          <button type="button" class="cert-card" data-full="assets/images/certs/MPK.JPG" data-issuer="SMKN 11 Bandung" data-date="Agustus 2024 - September 2025">
+            <img src="assets/images/certs/MPK.jpg" alt="Sertifikat kelulusan kelas Belajar Dasar AI" loading="lazy">
+            <span class="cert-name">MPK Komisi A</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATES -->
+    <section id="certificates" class="certificates-section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Sertifikasi</span>
+          <h2>Bukti pembelajaran yang terdokumentasi.</h2>
+        </div>
+
+        <h3 class="cert-group-title">Sertifikat Kompetensi &mdash; Dicoding Academy</h3>
+        <div class="cert-grid" id="cert-grid-academy">
+          <button type="button" class="cert-card" data-full="assets/images/certs/cert-basic-ai.jpg" data-issuer="Dicoding Academy" data-date="09 Oktober 2025">
+            <img src="assets/images/certs/cert-basic-ai.jpg" alt="Sertifikat kelulusan kelas Belajar Dasar AI" loading="lazy">
+            <span class="cert-name">Belajar Dasar AI</span>
+          </button>
+          <button type="button" class="cert-card" data-full="assets/images/certs/cert-web-dev.jpg" data-issuer="Dicoding Academy" data-date="23 Juli 2026">
+            <img src="assets/images/certs/cert-web-dev.jpg" alt="Sertifikat kelulusan kelas Belajar Dasar Pemrograman Web" loading="lazy">
+            <span class="cert-name">Belajar Dasar Pemrograman Web</span>
+          </button>
+          <button type="button" class="cert-card" data-full="assets/images/certs/cert-data-science.jpg" data-issuer="Dicoding Academy" data-date="06 Maret 2026">
+            <img src="assets/images/certs/cert-data-science.jpg" alt="Sertifikat kelulusan kelas Belajar Penerapan Data Science dengan Microsoft Fabric" loading="lazy">
+            <span class="cert-name">Belajar Penerapan Data Science dengan Microsoft Fabric</span>
+          </button>
+        </div>
+
+        <h3 class="cert-group-title cert-group-title-spaced">Sertifikat Kehadiran &mdash; IDCamp &amp; Dicoding Event</h3>
+        <div class="cert-grid" id="cert-grid-event">
+          <button type="button" class="cert-card" data-full="assets/images/certs/cert-devcoach.jpg" data-issuer="Dicoding Event" data-date="30 April 2026">
+            <img src="assets/images/certs/cert-devcoach.jpg" alt="Sertifikat kehadiran DevCoach 233: DevOps, Code is not Enough" loading="lazy">
+            <span class="cert-name">DevCoach 233: DevOps &mdash; Code is not Enough</span>
+          </button>
+          <button type="button" class="cert-card" data-full="assets/images/certs/cert-idcamp-dialogue.jpg" data-issuer="IDCamp" data-date="1 April 2026">
+            <img src="assets/images/certs/cert-idcamp-dialogue.jpg" alt="Sertifikat kehadiran IDCamp Alumni Dialogue #1, Adaptability and Growth Mindset in the Age of AI" loading="lazy">
+            <span class="cert-name">IDCamp Alumni Dialogue #1: Adaptability &amp; Growth Mindset</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- LEARNING JOURNEY -->
+    <section id="learning-journey" class="learning-journey-section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Perjalanan Belajar</span>
+          <h2>Setiap tahun, satu lompatan lebih jauh.</h2>
+        </div>
+        <div class="lj-timeline">
+
+          <div class="lj-card">
+            <div class="lj-year">2024</div>
+            <span class="lj-icon" aria-hidden="true">🌱</span>
+            <div class="lj-title">Mulai Belajar Mandiri</div>
+            <p class="lj-desc">
+              Memulai perjalanan otodidak saat masih di bangku SMK. Belajar HTML dan CSS dari nol
+              lewat teman, video youtube, dan percobaan langsung. Serta membuat halaman pertama yang
+              sederhana awal dari segalanya.
+            </p>
+          </div>
+
+          <div class="lj-card">
+            <div class="lj-year">2025</div>
+            <span class="lj-icon" aria-hidden="true">💻</span>
+            <div class="lj-title">Proyek Pertama Live</div>
+            <p class="lj-desc">
+              Berhasil membangun proyek pertama yaitu Nusantara-Properti ke github dimasa itu Nusantara-Properti
+              masih ada bug dan code error yang harus saya selesaikan serta saya masih harus terus banyak belajar lagi.
+            </p>
+          </div>
+
+          <div class="lj-card">
+            <div class="lj-year">2026</div>
+            <span class="lj-icon" aria-hidden="true">🚀</span>
+            <div class="lj-title">Mendalami Ekosistem Modern</div>
+            <p class="lj-desc">
+              Saya mulai belajar dari kesalahan sehingga pada akhirnya proyek Nusantara-Properti menjadi sempurna dan saya berhasil mendeploy ke vercel
+              Hingga pada akhirnya saya bisa menciptakan lagi Syntara dan Aurea walaupun di kedua proyek ini masih dikatakan belum sempurna, tetapi hingga saat ini saya
+              masih harus banyak belajar lagi, serta. Mulai mempelajari React, TypeScript, dan Next.js sebagai fondasi frontend modern.
+              Juga menjelajahi Docker, dan dasar-dasar Machine Learning untuk mempersiapkan
+              diri menuju karir full-stack dan AI engineering.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRENTLY LEARNING -->
+    <section id="currently-learning" class="currently-learning-section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Sedang Dipelajari</span>
+          <h2>Teknologi yang sedang aktif saya dalami sekarang.</h2>
+        </div>
+        <div class="cl-grid">
+
+          <div class="cl-badge">
+            <div class="cl-badge-header">
+              <span class="cl-badge-name">React</span>
+              <span class="cl-badge-tag">Learning</span>
+            </div>
+            <div class="cl-badge-level">Level: Menengah</div>
+            <p class="cl-badge-note">Komponen, hooks, state management dasar, dan integrasi API.</p>
+          </div>
+
+          <div class="cl-badge">
+            <div class="cl-badge-header">
+              <span class="cl-badge-name">Next.js</span>
+              <span class="cl-badge-tag">Learning</span>
+            </div>
+            <div class="cl-badge-level">Level: Dasar</div>
+            <p class="cl-badge-note">App Router, SSR, SSG, dan deployment ke Vercel.</p>
+          </div>
+
+          <div class="cl-badge">
+            <div class="cl-badge-header">
+              <span class="cl-badge-name">TypeScript</span>
+              <span class="cl-badge-tag">Learning</span>
+            </div>
+            <div class="cl-badge-level">Level: Dasar</div>
+            <p class="cl-badge-note">Tipe data, interface, generics, dan integrasi dengan React.</p>
+          </div>
+
+          <div class="cl-badge">
+            <div class="cl-badge-header">
+              <span class="cl-badge-name">AWS</span>
+              <span class="cl-badge-tag">Learning</span>
+            </div>
+            <div class="cl-badge-level">Level: Pemula</div>
+            <p class="cl-badge-note">S3, EC2, dan layanan dasar cloud untuk deployment aplikasi.</p>
+          </div>
+
+          <div class="cl-badge">
+            <div class="cl-badge-header">
+              <span class="cl-badge-name">Docker</span>
+              <span class="cl-badge-tag">Learning</span>
+            </div>
+            <div class="cl-badge-level">Level: Pemula</div>
+            <p class="cl-badge-note">Containerisasi aplikasi, Dockerfile, dan docker-compose.</p>
+          </div>
+
+          <div class="cl-badge">
+            <div class="cl-badge-header">
+              <span class="cl-badge-name">Machine Learning</span>
+              <span class="cl-badge-tag">Learning</span>
+            </div>
+            <div class="cl-badge-level">Level: Pemula</div>
+            <p class="cl-badge-note">Konsep dasar ML, supervised learning, dan Python untuk data.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB STATS -->
+    <section id="github-stats" class="github-stats-section">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="tag">Aktivitas GitHub</span>
+          <h2>Jejak kontribusi yang terus bertumbuh.</h2>
+        </div>
+        <div class="github-stats-grid">
+          <div class="stat-card">
+            <span class="stat-val" aria-label="Jumlah commit">9</span>
+            <span class="stat-label">Commits</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-val" aria-label="Jumlah repositori">4</span>
+            <span class="stat-label">Repositories</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-val" aria-label="Bahasa utama">HTML, CSS, JavaScript</span>
+            <span class="stat-label">Bahasa Utama</span>
+          </div>
+        </div>
+        <div class="github-link-row">
+          <a href="https://github.com/ArmansyahSoft" target="_blank" rel="noopener noreferrer" aria-label="Lihat profil GitHub Armansyah">
+            Lihat profil GitHub →
+          </a>
+        </div>
+      </div>
+    </section>
+
+  <!-- ================= FOOTER ================== -->
+  <footer>
+    <div class="wrap">
+      <div class="foot-meta">
+        <p>&copy; <span id="footer-year">2026</span> Arman, dibangun dari nol, baris demi baris.</p>
+        <p class="built-with">Dibangun dengan <strong>HTML · CSS · JavaScript</strong></p>
+        <p class="mono" id="footer-updated">Terakhir diperbarui: Juli 2026</p>
+      </div>
+      <div class="foot-links">
+        <a href="https://chatbot-github-id.vercel.app/" target="_blank" rel="noopener noreferrer">Nusantara Properti</a>
+        <a href="https://syantara.vercel.app/" target="_blank" rel="noopener noreferrer">Syantara</a>
+        <a href="https://aurea-flame.vercel.app/" target="_blank" rel="noopener noreferrer">AURÉA</a>
+        <button id="back-to-top" aria-label="Kembali ke atas halaman">↑ Atas</button>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

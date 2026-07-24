@@ -1,0 +1,118 @@
+/*=================================
+  COMPONENTS — elemen yang dipakai berulang lintas section
+==================================*/
+
+/* --- Tombol --- */
+.btn {
+  display: inline-block;
+  padding: 13px 28px;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .04em;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all var(--dur-fast) var(--ease);
+}
+.btn-brass { background: var(--brass); color: var(--ink); font-weight: 500; }
+.btn-brass:hover { background: var(--brass-hi); }
+.btn-line { border-color: var(--panel-line); color: var(--paper); background: transparent; }
+.btn-line:hover { border-color: var(--brass); color: var(--brass); }
+.btn[disabled],
+.btn[aria-disabled="true"] {
+  opacity: .45;
+  cursor: not-allowed;
+}
+.btn[disabled]:hover,
+.btn[aria-disabled="true"]:hover {
+  background: none;
+  border-color: var(--panel-line);
+  color: var(--paper-dim);
+}
+
+/* --- Ledger: elemen signature, data disusun seperti baris buku besar --- */
+.ledger {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--panel-line);
+}
+.ledger-cell { padding: 22px 24px; border-right: 1px solid var(--panel-line); }
+.ledger-cell:last-child { border-right: none; }
+.ledger-cell .val { font-family: var(--font-display); font-size: 1.7rem; color: var(--brass); margin-bottom: 4px; }
+.ledger-cell .lbl { font-family: var(--font-mono); font-size: var(--fs-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--paper-dim); }
+
+/* --- Status dot (dipakai di project-visual & tempat lain) --- */
+.status-dot {
+  display: inline-flex; align-items: center; gap: var(--sp-2);
+  font-family: var(--font-mono); font-size: var(--fs-mono); color: var(--sage);
+}
+.status-dot::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--sage); }
+.status-dot[data-status="draft"] { color: var(--paper-dim); }
+.status-dot[data-status="draft"]::before { background: var(--paper-dim); }
+
+/* --- Badge dasar (skill badge, cl-badge tag, dsb turunan dari sini) --- */
+.badge {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  padding: 5px 10px;
+  border: 1px solid var(--panel-line);
+  color: var(--paper-dim);
+  display: inline-block;
+}
+
+/* --- Kartu generik: dasar untuk card di skills/experience/certificates/blog --- */
+.card {
+  border: 1px solid var(--panel-line);
+  background: var(--panel);
+  padding: var(--sp-5);
+}
+
+/* --- Form field generik (dipakai di contact) --- */
+.field { margin-bottom: var(--sp-4); }
+.field label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  margin-bottom: var(--sp-2);
+}
+.field input,
+.field textarea {
+  width: 100%;
+  background: var(--panel);
+  border: 1px solid var(--panel-line);
+  color: var(--paper);
+  padding: 12px 14px;
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.field input:focus,
+.field textarea:focus { border-color: var(--brass); }
+.field textarea { resize: vertical; min-height: 130px; }
+.field .field-error {
+  display: block;
+  margin-top: var(--sp-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  color: var(--rust);
+}
+.field[data-invalid="true"] input,
+.field[data-invalid="true"] textarea { border-color: var(--rust); }
+
+/* --- Scroll-reveal utilitas: elemen mulai tersembunyi, JS menambah .is-visible --- */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity var(--dur-slow) var(--ease), transform var(--dur-slow) var(--ease);
+}
+[data-reveal].is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transform: none; }
+}
+
+@media (max-width: 800px) {
+  .ledger { grid-template-columns: 1fr; }
+  .ledger-cell { border-right: none; border-bottom: 1px solid var(--panel-line); }
+}

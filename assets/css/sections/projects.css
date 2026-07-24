@@ -1,0 +1,78 @@
+/*=================================
+  PROJECTS
+==================================*/
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  border: 1px solid var(--panel-line);
+  margin-bottom: var(--sp-4);
+  background: var(--panel);
+  transition: border-color var(--dur-fast) var(--ease), transform var(--dur-fast) var(--ease);
+}
+.project-card:hover {
+  border-color: var(--brass);
+  transform: translateY(-2px);
+}
+.project-card:last-child { margin-bottom: 0; }
+
+.project-visual {
+  background: linear-gradient(155deg, var(--panel-2), #161D24);
+  padding: var(--sp-5);
+  display: flex; flex-direction: column; justify-content: space-between;
+  border-right: 1px solid var(--panel-line);
+  min-height: 220px;
+}
+.project-visual .ptitle {
+  font-size: 1.6rem;
+  color: var(--paper);
+  margin-top: var(--sp-4);
+}
+
+.project-body { padding: var(--sp-5); display: flex; flex-direction: column; }
+.project-body p { color: var(--paper-dim); margin-bottom: var(--sp-3); }
+
+.feature-list { margin-bottom: var(--sp-4); }
+.feature-list li {
+  position: relative;
+  padding-left: var(--sp-4);
+  color: var(--paper-dim);
+  font-size: var(--fs-small);
+  margin-bottom: 6px;
+}
+.feature-list li::before {
+  content: "";
+  position: absolute; left: 0; top: 9px;
+  width: 5px; height: 5px;
+  background: var(--brass);
+}
+
+.stack { display: flex; flex-wrap: wrap; gap: var(--sp-2); margin-bottom: var(--sp-5); }
+.stack span {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  padding: 5px 10px;
+  border: 1px solid var(--panel-line);
+  color: var(--paper-dim);
+}
+
+.project-actions { display: flex; gap: var(--sp-3); margin-top: auto; }
+
+/* Filter proyek (arsitektur siap, difungsikan lewat data-filter di JS) */
+.project-card[hidden] { display: none; }
+.project-filter-bar {
+  display: flex; gap: var(--sp-2); flex-wrap: wrap;
+  margin-bottom: var(--sp-5);
+}
+.filter-chip {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  padding: 6px 14px;
+  border: 1px solid var(--panel-line);
+  color: var(--paper-dim);
+}
+.filter-chip[aria-pressed="true"] { border-color: var(--brass); color: var(--brass); }
+
+@media (max-width: 800px) {
+  .project-card { grid-template-columns: 1fr; }
+  .project-visual { border-right: none; border-bottom: 1px solid var(--panel-line); }
+}

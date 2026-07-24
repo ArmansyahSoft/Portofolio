@@ -1,0 +1,97 @@
+/*=================================
+  BASE — reset & elemen dasar
+==================================*/
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img, svg { display: block; max-width: 100%; }
+
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.15; }
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+ul { list-style: none; }
+
+input, textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* --- Fokus keyboard yang jelas di seluruh situs --- */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 3px;
+}
+
+/* --- Utilitas kecil dipakai lintas section --- */
+.mono { font-family: var(--font-mono); }
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--brass);
+  display: block;
+}
+
+/* --- Skip link (aksesibilitas) --- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 4px;
+  z-index: 999;
+  background: var(--brass);
+  color: var(--ink);
+  padding: var(--sp-2) var(--sp-3);
+  font-family: var(--font-mono);
+  font-size: var(--fs-small);
+}
+.skip-link:focus { left: 4px; }
+
+/* --- Visually-hidden util, untuk label yang hanya perlu terbaca screen reader --- */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

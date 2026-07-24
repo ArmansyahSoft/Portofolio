@@ -1,0 +1,55 @@
+/*=================================
+  SKILLS
+==================================*/
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-5) var(--sp-6);
+}
+
+.skill-category-title {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  margin-bottom: var(--sp-3);
+  padding-bottom: var(--sp-2);
+  border-bottom: 1px solid var(--panel-line);
+}
+
+.skill-badges { display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+
+.skill-badge {
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono);
+  padding: 6px 10px;
+  border: 1px solid var(--panel-line);
+  color: var(--paper);
+  position: relative;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+.skill-badge:hover { border-color: var(--brass); }
+
+/* Skill yang masih dipelajari: label kecil, bukan progress bar/persentase palsu */
+.skill-badge[data-learning="true"] {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  color: var(--paper-dim);
+  border-style: dashed;
+}
+.skill-badge .learning-label {
+  font-size: .62rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--brass);
+}
+
+@media (max-width: 800px) {
+  .skills-categories { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 520px) {
+  .skills-categories { grid-template-columns: 1fr; }
+}
